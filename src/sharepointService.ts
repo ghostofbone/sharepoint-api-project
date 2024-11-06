@@ -14,6 +14,7 @@ export async function getFormDigest(): Promise<string> {
         },
     });
     const data = await response.json();
+    // @ts-ignore
     return data.d.GetContextWebInformation.FormDigestValue;
 }
 
